@@ -376,7 +376,7 @@ NS_INLINE NSRange visibleRangWithOffset(CGFloat offset,CGFloat width, NSInteger 
     if (viewController.parentViewController) {
         [self removeViewController:viewController];
         // remove and cache
-        if (![_memoryCache objectForKey:@(index)]) {
+        if (self.memoryCache && ![_memoryCache objectForKey:@(index)]) {
             [_memoryCache setObject:viewController forKey:@(index)];
         }
     }

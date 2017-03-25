@@ -43,6 +43,8 @@
 @property (nonatomic, weak) id<TYPagerControllerDataSource> dataSource;
 @property (nonatomic, weak) id<TYPagerControllerDelegate>   delegate;
 
+@property (nonatomic, assign) BOOL enableMemoryCache;// default NO
+
 @property (nonatomic, strong, readonly) NSCache *memoryCache;// cache pagerController, you can set countLimit
 
 @property (nonatomic, assign, readonly) NSInteger countOfControllers;// after viewdidload or reload have value
